@@ -101,9 +101,24 @@ let finalizedEmployeeList = calculateAllEmployeeBonus(employees);
 
 console.log ('Test calculateAllEmployeeBonus:', calculateAllEmployeeBonus(employees));
 
+let notPressed = true;
 
 $(document).ready(function(){
-  for (let employee of finalizedEmployeeList) {
-    $(".employeeBonus").append(`<p>Name: ${employee.name}; Bonus Percentage: ${employee.bonusPercentage};  Total Bonus: ${employee.totalBonus}; Total Compensation: ${employee.totalCompensation} </p>`)
+  $( "#calculateBonus").hover(function() {
+    $('#calculateBonus').css('background-color', 'blueviolet');
+    $('#calculateBonus').css('color', 'azure');
+  },
+  function () {
+    $('#calculateBonus').css('background-color', 'azure');
+    $('#calculateBonus').css('color', 'blueviolet');
+  });
+
+  $( "#calculateBonus").click(function() {
+    if(notPressed) {
+    for (let employee of finalizedEmployeeList) {
+      $(".employeeBonus").append(`<p>Name: ${employee.name}; Bonus Percentage: ${employee.bonusPercentage};  Total Bonus: ${employee.totalBonus}; Total Compensation: ${employee.totalCompensation} </p>`)
+    }
   }
+    notPressed = false;
+  })
 });

@@ -1,0 +1,38 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+    background-color:bisque;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color:rgb(55, 89, 105)
+}
+
+p {
+    text-align: left;
+}
+
+#frame {
+    border: solid 5px black;
+    background-color: blanchedalmond;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#calculateBonus {
+    color: blueviolet;
+    width: 500px;
+    height: 250px;
+    font-size: 5em;
+    background-color: azure;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 50px;
+    margin: auto;
+    border-color: rgb(55, 89, 105);
+}
+
