@@ -97,4 +97,13 @@ function calculateIndividualEmployeeBonus( employee ) {
   return calculatedEmployee;
 }
 
+let finalizedEmployeeList = calculateAllEmployeeBonus(employees);
+
 console.log ('Test calculateAllEmployeeBonus:', calculateAllEmployeeBonus(employees));
+
+
+$(document).ready(function(){
+  for (let employee of finalizedEmployeeList) {
+    $(".employeeBonus").append(`<p>Name: ${employee.name}; Bonus Percentage: ${employee.bonusPercentage};  Total Bonus: ${employee.totalBonus}; Total Compensation: ${employee.totalCompensation} </p>`)
+  }
+});
