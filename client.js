@@ -44,14 +44,20 @@ console.log('array of employee data: ',  employees );
 // Ask questions when you don't.
 
 
+function calculateAllEmployeeBonus (employeeArray) {
+  for (let employee of employeeArray) {
+    console.log(calculateIndividualEmployeeBonus( employee ));
+  }
+}
 
 
 // This function will calculate 1 employee's bonus!
 //
 function calculateIndividualEmployeeBonus( employee ) {  
   // your logic here
-  
-  
+    
   // return new object with bonus results
-
+  return employee;
 }
+
+console.log ('Test calculateAllEmployeeBonus:', calculateAllEmployeeBonus(employees));
